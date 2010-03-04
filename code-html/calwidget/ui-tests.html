@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Calendar Widget User Interface Eyeball Tests</title>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <meta name="description" content="Calwidget - an HTML widget with simplicty in mind" />
+    <link rel="stylesheet" href="css/widgets.calendar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/ui-tests.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/widgets.calendar.js"> </script>
+</head>
+
+<body>
+
+<h3>1.0 - CalWidget Basic Tests</h4>
+
+<script type="text/javascript">
+    // Initalize new Calendar Widget
+    //
+    var calR14To = new widgets.Calendar("r14To","","r14From","mm-dd-yyyy",widgets.Calendar.NO_EDIT, widgets.Calendar.NO_ICON,"calendar/calwidget.gif");
+</script>
+
+<h4>1.1 - debug()</h5>
+<script type="text/javascript">
+    calR14To.showDebug();
+</script>
+
+<h4>1.2 - Date Format yyyy-mm-dd</h4>
+<script type="text/javascript">
+    calR14To.show();
+</script>
+</body>
+
+</html>

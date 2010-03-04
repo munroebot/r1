@@ -1,0 +1,8 @@
+format a string to a date
+=========================
+
+import time
+
+x='2007-03-01 16:05:02,397'
+time.strptime(x[:len(x)-4],'%Y-%m-%d %H:%M:%S')
+

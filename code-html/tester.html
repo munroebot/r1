@@ -1,0 +1,25 @@
+<html>
+<head>
+<title></title>
+</head>
+
+<script type="text/javascript">
+
+function writeOutput(messageText)
+{
+	document.getElementById('outp').innerHTML += document.lastModified;
+}
+
+function init()
+{
+	document.getElementById('button01').onclick = writeOutput;
+	document.getElementById('button02').onclick = writeOutput;
+}
+</script>
+
+<body onload="init()">
+	<button id="button01">document property</button>
+	<button id="button02">document property</button>
+	<div id='outp' style="border:1px solid; padding:10px;"></div>
+</body>
+</html>

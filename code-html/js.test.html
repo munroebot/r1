@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+
+<script type="text/javascript">
+
+if (!widgets) var widgets = {};
+
+widgets.Button = function(label,action) {
+	this.label = label;
+	this.action = action;
+}
+
+widgets.Button.prototype.setLabel = function(label) {
+	this.label = label;
+}
+
+widgets.Button.prototype.getLabel = function() {
+	return this.label;
+}
+
+widgets.Button.prototype.setLabel = function(action) {
+	this.action = action;
+}
+
+widgets.Button.prototype.getLabel = function() {
+	return this.action;
+}
+
+widgets.Button.prototype.render = function() {
+	document.writeln(this.label);
+}
+
+
+</script>
+
+</head>
+
+<body>
+<form>
+<script type="text/javascript">
+
+b1 = new widgets.Button('Brian','submit');
+b1.render();
+
+b2 = new widgets.Button('Franky','submit');
+b2.render();
+
+
+</script>
+
+</form>
+
+</body>
+
+</html>

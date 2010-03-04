@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<style>
+
+body {
+	margin: 10px;
+	font-family: Arial, Helvetica;
+	font-size: 12px;
+}
+
+h2 {
+	border-bottom: 1px solid;
+}
+
+p, code {
+	font-size: 100%;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+pre {
+	background: #eee;
+	font-size: 112%;
+	border: 2px solid #c0c0c0;
+	padding: 5px;
+	width: 550px;
+	color: #000;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+	font-size: 100%;
+}
+
+.footnote {
+	margin-top:50px;
+	padding-top:10px;
+	border-top: 1px solid #ccc;
+	font-size: 90%;
+}
+
+a:hover, a:linked, a:visited {
+	color: #0000ff;
+	text-decoration: none;
+}
+
+</style>
+<title>Calendar Popup Widget</title>
+
+<link type="text/css" rel="stylesheet" href="css/calendar.css" />
+<script type="text/javascript" src="js/calendar.js"></script>
+
+</head>
+<body>
+
+<h2>Calendar Widget v1.1</h2>
+<p>Yet another HTML based calendar widget?  Sure, why not.</p>
+<p>If you have any comments, suggestions, improvements, please contact the <a href="mailto:info@tribador.net?subject=calwidget10">author</a></p>
+<h3>0.0 - Recent News</h3>
+<ul>
+<li>11/02/2005 - We're back!  Currently working on <a href="http://tribador.net/projects/calwidget-1.1/calwidget-1.1.tgz">calwidget-1.1.tgz</a></li>
+<li>07/31/2004 - Initial Release of CalWidget.  You can download it here: <a href="http://tribador.net/projects/calwidget-1.1/calwidget-1.1.tgz">calwidget-1.1.tgz</a></li>
+</ul>
+
+
+<h3>1.0 - Demo:</h3>
+<p>Let's not bore you with the details, here is an example of the widget in action: <script type="text/javascript">createCalendarWidget('MgrDueDate','mm/dd/yyyy','EDIT', 'ICON','./images/calwidget-icon.gif');</script></p>
+
+<h3>2.0 - Syntax:</h3>
+<pre>void createCalendarWidget(string widget_id,
+                          string date_format,
+                          string EDIT | NO_EDIT,
+                          string ICON | NO_ICON,
+                          string icon_path)
+</pre>
+
+<dl>
+<dt><i>string</i> widget_id</dt>
+<dd>The widget_id sets the values for the text field <code>&lt;input&gt;</code> tag <code>name</code> and <code>id</code> attributes.</dd>
+<dt><i>string</i> date_format</dt>
+<dd>The date_format sets the date format (currently <code>yyyy/mm/dd, mm/dd/yyyy or dd/mm/yyyy</code>)</dd>
+<dt><i>string</i> EDIT | NO_EDIT</dt>
+<dd>The EDIT | NO_EDIT string argument tells the widget to appear in read/write or read-only mode.</dd>
+<dt><i>string</i> ICON | NO_ICON</dt>
+<dd>The ICON | NO_ICON string argument causes the widget to display a 'calendar' icon next to the text field.</dd>
+<dt><i>string</i> icon_path</dt>
+<dd>The icon_path is a relative or absolute path to the icon that should be displayed if the ICON argument is set.</dd>
+</dl>
+
+<h3>3.0 - Usage Example:</h3>
+<p>To use the widget, you have to include a javascript library and a cascading style sheet,
+as shown below.  Standard convention is to place these in the <code>&lt;head&gt;</code> section of the document.
+Be sure to change the <code>href</code> and <code>src</code> attributes to reflect your setup.
+</p>
+<pre>
+&lt;link type="text/css" rel="stylesheet" href="calendar.css" /&gt;
+&lt;script type="text/javascript" src="calendar.js"&gt;&lt;/script&gt;
+</pre>
+
+<p>
+Where ever you want to place a widget, use the following code:
+</p>
+<pre>
+&lt;script type="text/javascript"&gt;
+    createCalendarWidget('MgrDueDate','mm/dd/yyyy','EDIT', 'ICON','./images/calendar-icon.gif');
+&lt;/script&gt;
+</pre>
+<b><img src="resources/alert.gif" /> Important!</b>
+<p>
+You will need to set the widget_id (<i>'MgrDueDate' in the above example</i>) to something unique, as you would
+when creating a text field.  The widget_id controls the <code>name</code> and <code>id</code> attributes of the date entry field  <code>&lt;input&gt;</code> tag .
+</p>
+
+<h3>4.0 - Cascading Style Sheet Guidelines</h3>
+<p>The widget was designed with flexability in mind, so everything has been styled using CSS.  You can modify the look and feel of
+the widget by modifying the entities in the <code>calendar.css</code> file.
+</p>
+<img src="resources/legend.gif" />
+
+<div class="footnote">
+</div>
+
+</body>
+</html>

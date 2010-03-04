@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+	<Resource name="jdbc/XEDB"
+	    type="javax.sql.DataSource"
+	    driverClassName="oracle.jdbc.OracleDriver"
+	    url="jdbc:oracle:thin:brian/password@//localhost:1521/XE"
+	    maxActive="100" 
+	    maxIdle="30" 
+	    maxWait="10000"
+	    removeAbandoned="true"
+		  removeAbandonedTimeout="60"
+		  logAbandoned="true"  />
+</Context>

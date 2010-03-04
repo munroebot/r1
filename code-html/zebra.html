@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Zebra Tables Test</title>
+
+<style type="text/css">
+body {font-size:10px;}
+#playlist {color:#000;border: 3px solid #ccc;padding:3px;margin:0px;border-collapse:collapse;width:550px;}
+#playlist th {padding:2px;text-align:left;}
+#playlist tr.even td {background-color:#edf3fe;color:#000;border:1px solid #ccc;padding:3px;margin:0px;}
+#playlist tr.odd td {background-color:#fff;color:#000;border:1px solid #ccc;padding:3px;margin:0px;}
+
+</style>
+
+</head>
+<body>
+<table id="playlist">
+<tr><th>Element Number</th></tr>
+<script type="text/javascript">
+
+var a = new Array("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten");
+
+for (i=0;i < a.length;i++) {
+    className = i % 2 ? 'odd': 'even';
+    document.write("<tr class='" + className + "'><td>" + a[i] + "</td></tr>");
+}
+
+</script>
+</table>
+</body>
+</html>
