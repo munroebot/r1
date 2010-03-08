@@ -13,7 +13,7 @@ import java.io.*;
             env.put(Context.SECURITY_AUTHENTICATION, "simple");
             env.put(Context.SECURITY_PROTOCOL, "ssl");
             env.put(Context.SECURITY_PRINCIPAL, "ymservices" + "\\" + "munroeb");
-            env.put(Context.SECURITY_CREDENTIALS, "Js0n5ord_");
+            env.put(Context.SECURITY_CREDENTIALS, "");
 
             try {
                 DirContext ctx = new InitialDirContext(env);
