@@ -1,9 +1,9 @@
 export MYSQL_HOME=/usr/local/mysql-5.0.51b-osx10.4-i686
-export CATALINA_HOME=/Users/brian/apache-tomcat-6.0.24
-export GRAILS_HOME=/Users/brian/grails-1.2.1
+export CATALINA_HOME=$HOME/apache-tomcat-6.0.24
+export GRAILS_HOME=$HOME/grails-1.2.1
+export PYTHON_HOME=/Library/Frameworks/Python.framework/Versions/Current/bin
 
 export EDITOR=nano
-
 export PATH=/usr/local/git/bin:/usr/local/bin:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$PATH
 
 alias ls='ls -G'
