@@ -1,25 +1,24 @@
-export MYSQL_HOME=/usr/local/mysql-5.0.51b-osx10.4-i686
-export CATALINA_HOME=$HOME/apache-tomcat-6.0.24
-export GRAILS_HOME=$HOME/grails-1.2.1
-export PYTHON_HOME=/Library/Frameworks/Python.framework/Versions/Current/bin
+# distributed platform dot-bashrc file
+# last modified: 2010-03-11
 
-export EDITOR=nano
-export PATH=/usr/local/git/bin:/usr/local/bin:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$PATH
+export GPG_HOME=/usr/local/gnupg-1.4.10
+export MYSQL_HOME=/usr/local/mysql
+export GRAILS_HOME=$HOME/grails-1.2.1
+export GROOVY_HOME=$HOME/groovy-1.7.0
+export JYTHON_HOME=$HOME/jython-2.5.1
+export M2_HOME=$HOME/apache-maven-2.2.1
+
+export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
+export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
+export PATH=$GPG_HOME/bin:$PATH
+
+export LSCOLORS="hx"
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
 
-PASSWORD_TXT="$HOME/r1/passwords.txt"
-PASSWORD_TXT_ASC="$HOME/r1/moonshine-recipe.txt.asc"
-alias psc="gpg  -i -a -c --cipher-algo AES256 $PASSWORD_TXT"
-alias psd="gpg --decrypt -o $PASSWORD_TXT $PASSWORD_TXT_ASC ; $EDITOR $PASSWORD_TXT ; psc ; rm -f $PASSWORD_TXT"
-alias greppw="gpg --decrypt $PASSWORD_TXT_ASC | grep -i --color=auto -C 4 $1"
-
-alias backup_home="rsync -a --delete --progress --stats ./brian/ /Volumes/New\ Volume/"
-
-export CATALINA_OPTS="-XX:+HeapDumpOnOutOfMemoryError \
-                      -Xms512m -Xmx512m \
-                      -Dcom.sun.management.jmxremote \
-                      -Dcom.sun.management.jmxremote.port=8614 \
-                      -Dcom.sun.management.jmxremote.ssl=false \
-                      -Dcom.sun.management.jmxremote.authenticate=false"
+MOONSHINE_TXT="$HOME/r1/moonshine-recipe.txt"
+MOONSHINE_TXT_ASC="$HOME/r1/moonshine-recipe.txt.asc"
+alias psc="gpg --no-use-agent -i -a -c --cipher-algo AES256 $MOONSHINE_TXT"
+alias psd="gpg --no-use-agent --decrypt -o $MOONSHINE_TXT $MOONSHINE_TXT_ASC ; $EDITOR $MOONSHINE_TXT ; psc ; rm -f $MOONSHINE_TXT"
+alias greppw="gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 $1"
