@@ -13,6 +13,7 @@ export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
 export PATH=$GPG_HOME/bin:$PATH
 
 export LSCOLORS="hx"
+export EDITOR="nano"
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
