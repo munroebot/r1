@@ -1,4 +1,6 @@
-#!/usr/bin/perl
+#!/usr/bin/perl -w 
+
+
 #
 # little perl script to send a wake-up "magic" packet via lan to power-on
 # a PC. This is only supported by new BIOS versions, and must be supported
