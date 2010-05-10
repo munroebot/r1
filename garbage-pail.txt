@@ -1,1 +1,2 @@
 redis + tornado + nginx
+winstone + grails
