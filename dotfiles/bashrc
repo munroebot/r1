@@ -1,5 +1,5 @@
 # distributed platform dot-bashrc file
-# last modified: 2010-03-11
+# last modified: 2010-05-11
 
 export GPG_HOME=/usr/local/gnupg-1.4.10
 export MYSQL_HOME=/usr/local/mysql
