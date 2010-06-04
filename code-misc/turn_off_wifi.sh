@@ -13,23 +13,25 @@
 # it will disable the wifi interace (the default behavior).
 #
 
+root_plist="/private/var/root/Library/Preferences/com.apple.loginwindow";
+
 if [ ${1} ]; then
     
     if [ ${1} == 'install' ]; then
         echo -n "Installing the turn_off_wifi LogoutHook..."
-        /usr/bin/sudo /usr/bin/defaults write com.apple.loginwindow LogoutHook $PWD/$0;
+        /usr/bin/sudo /usr/bin/defaults write ${root_plist} LogoutHook /Users/bmunroe/r1/code-misc/turn_off_wifi.sh;
         echo "done.";
     fi
     
     if [ ${1} == 'remove' ]; then
         echo -n "Deleting the turn_off_wifi LogoutHook..."
-        /usr/bin/sudo /usr/bin/defaults delete com.apple.loginwindow LogoutHook;
+        /usr/bin/sudo /usr/bin/defaults delete ${root_plist} LogoutHook;
         echo "done.";
     fi
     
     if [ ${1} == 'status' ]; then
         echo "Current value of com.apple.loginwindow LogoutHook:"
-        /usr/bin/sudo /usr/bin/defaults read com.apple.loginwindow LogoutHook;
+        /usr/bin/sudo /usr/bin/defaults read ${root_plist} LogoutHook;
     fi
     
 else
