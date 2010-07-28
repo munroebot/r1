@@ -13,7 +13,7 @@ export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
 export PATH=$GPG_HOME/bin:$PATH
 
 export LSCOLORS="hx"
-export EDITOR="nano"
+export EDITOR="mvim -N"
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
@@ -24,5 +24,14 @@ alias psc="gpg --no-use-agent -i -a -c --cipher-algo AES256 $MOONSHINE_TXT"
 alias psd="gpg --no-use-agent --decrypt -o $MOONSHINE_TXT $MOONSHINE_TXT_ASC ; $EDITOR $MOONSHINE_TXT ; psc ; rm -f $MOONSHINE_TXT"
 alias greppw="gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 $1"
 
-# 631-5047 c
-# 682-1412 b and n
+pman () {
+    man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
+tman () {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
+
+
+#/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
+
