@@ -23,7 +23,7 @@ if [ ${1} ]; then
         echo "done.";
     fi
     
-    if [ ${1} == 'remove' ]; then
+    if [ ${1} == 'delete' ]; then
         echo -n "Deleting the turn_off_wifi LogoutHook..."
         /usr/bin/sudo /usr/bin/defaults delete ${root_plist} LogoutHook;
         echo "done.";
@@ -33,7 +33,7 @@ if [ ${1} ]; then
         echo "Current value of com.apple.loginwindow LogoutHook:"
         /usr/bin/sudo /usr/bin/defaults read ${root_plist} LogoutHook;
     fi
-    
+        
 else
     /usr/sbin/networksetup -setairportpower en1 off;
 fi
