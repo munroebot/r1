@@ -29,9 +29,9 @@ pman () {
 }
 
 tman () {
-  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+    MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
 }
 
 
-#/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
+# /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
 
