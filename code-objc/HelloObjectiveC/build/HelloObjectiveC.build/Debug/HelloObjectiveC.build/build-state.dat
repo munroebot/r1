@@ -1,0 +1,93 @@
+THelloObjectiveC
+v7
+r0
+t303190593.679949
+cCheck dependencies
+cProcessPCH /var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch.gch HelloObjectiveC_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.o /Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004B99A23900000000000000EE
+t1268359737
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B447F4E00000000000013E6
+t1262780238
+s5094
+
+N/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C11730A0000000000B37440
+t1276211978
+s11760704
+
+N/Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m
+c000000004C621A6000000000000000EA
+t1281497696
+s234
+i<Foundation/Foundation.h>
+
+N/Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC_Prefix.pch
+c000000004C621A6000000000000000AC
+t1281497696
+s172
+i<Foundation/Foundation.h>
+
+N/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC
+t1281497757
+s9312
+
+N/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.LinkFileList
+c000000004C621A9A000000000000008C
+t1281497754
+s140
+
+N/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.o
+t1281497757
+s6980
+
+N/var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch.gch
+t1281497757
+s41401104
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies303190593#303190593#0(0"0(0#1#0"4300911832#0"0#
+
+CCompileC build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.o /Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s303190557.334919
+e303190557.512995
+r1
+xCompileC
+xbuild/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.o
+x/Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m303190557#303190557#0(0"0(0#0#61"/Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m4300911832#1694"    cd /Users/bmunroe/r1/code-objc/HelloObjectiveC    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-generated-files.hmap -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-own-target-headers.hmap -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-all-target-headers.hmap -iquote /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-project-headers.hmap -F/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/include -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/DerivedSources/x86_64 -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/DerivedSources -include /var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch -c /Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC.m -o /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.o0#
+
+CLd /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC normal x86_64
+s303190557.513085
+e303190557.927074
+r1
+xLd
+x/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC
+xnormal
+xx86_64
+lSLF07#2@76"Link /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC303190557#303190557#0(0"0(0#0#0"4300911832#577"    cd /Users/bmunroe/r1/code-objc/HelloObjectiveC    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug -F/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug -filelist /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/Objects-normal/x86_64/HelloObjectiveC.LinkFileList -mmacosx-version-min=10.6 -framework Foundation -o /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/HelloObjectiveC0#
+
+CProcessPCH /var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch.gch HelloObjectiveC_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s303190554.973853
+e303190557.334637
+r1
+xProcessPCH
+x/var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch.gch
+xHelloObjectiveC_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@37"Precompile HelloObjectiveC_Prefix.pch303190555#303190557#0(0"0(0#0#70"/Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC_Prefix.pch7018095190362318848#1565"    cd /Users/bmunroe/r1/code-objc/HelloObjectiveC    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-generated-files.hmap -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-own-target-headers.hmap -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-all-target-headers.hmap -iquote /Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/HelloObjectiveC-project-headers.hmap -F/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/Debug/include -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/DerivedSources/x86_64 -I/Users/bmunroe/r1/code-objc/HelloObjectiveC/build/HelloObjectiveC.build/Debug/HelloObjectiveC.build/DerivedSources -c /Users/bmunroe/r1/code-objc/HelloObjectiveC/HelloObjectiveC_Prefix.pch -o /var/folders/o0/o0+p47VHEG4NI7o8Z6ZjrJ+UBFU/-Caches-/com.apple.Xcode.1344288024/SharedPrecompiledHeaders/HelloObjectiveC_Prefix-hlezulzjxciemhccfzuhxbzbpvub/HelloObjectiveC_Prefix.pch.gch0#
+
