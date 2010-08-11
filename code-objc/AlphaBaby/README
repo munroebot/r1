@@ -1,0 +1,23 @@
+The source code is provided as an Xcode project.  
+There are two targets that can be built: 
+	AlphaBaby  - the application
+	AlphaBabySaver - the screen saver
+
+The same basic source code is used to build both targets.
+
+AlphaBaby has three different build styles:
+	Development - AB runs full screen, but with all debugging turned on
+	Deployment - AB runs full screen, but with no debugging on
+	Debug Small Screen - AB runs in a normal window, 
+		with all debugging on (this doesn't affect the screen saver)
+
+The source code is partially commented - more comments in a future version.
+
+The source code is made freely available under the GNU General Public 
+License, but copyrights are retained by the author, Laura Dickey.
+
+Any questions, comments, bugfixes, enhancements, etc. can be sent 
+back to alphababy.mac@gmail.com.
+
+Thank you!
+

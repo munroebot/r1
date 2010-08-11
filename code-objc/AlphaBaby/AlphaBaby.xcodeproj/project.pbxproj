@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2609C1A405BB27B20026DF1C /* ABDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19905BB27B20026DF1C /* ABDebug.h */; };
+		2609C1A505BB27B20026DF1C /* ColorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19A05BB27B20026DF1C /* ColorManager.h */; };
+		2609C1A605BB27B20026DF1C /* ColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19B05BB27B20026DF1C /* ColorManager.m */; };
+		2609C1A705BB27B20026DF1C /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19C05BB27B20026DF1C /* Controller.h */; };
+		2609C1A805BB27B20026DF1C /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19D05BB27B20026DF1C /* Controller.m */; };
+		2609C1A905BB27B20026DF1C /* krand.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19E05BB27B20026DF1C /* krand.h */; };
+		2609C1AA05BB27B20026DF1C /* krand.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19F05BB27B20026DF1C /* krand.m */; };
+		2609C1AB05BB27B20026DF1C /* PoundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C1A005BB27B20026DF1C /* PoundView.h */; };
+		2609C1AC05BB27B20026DF1C /* PoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C1A105BB27B20026DF1C /* PoundView.m */; };
+		2609C1AD05BB27B20026DF1C /* PoundWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C1A205BB27B20026DF1C /* PoundWindow.h */; };
+		2609C1AE05BB27B20026DF1C /* PoundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C1A305BB27B20026DF1C /* PoundWindow.m */; };
+		2609C1B405BB285F0026DF1C /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1B305BB285F0026DF1C /* Credits.html */; };
+		2609C1C105BB28CD0026DF1C /* ABIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BB05BB28CD0026DF1C /* ABIcon.icns */; };
+		2609C1C205BB28CD0026DF1C /* Infant.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BC05BB28CD0026DF1C /* Infant.clr */; };
+		2609C1C305BB28CD0026DF1C /* PinkDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BD05BB28CD0026DF1C /* PinkDot.png */; };
+		2609C1C405BB28CD0026DF1C /* Primary.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BE05BB28CD0026DF1C /* Primary.clr */; };
+		2609C1C505BB28CD0026DF1C /* Rainbow.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BF05BB28CD0026DF1C /* Rainbow.clr */; };
+		2609C1C605BB28CD0026DF1C /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1C005BB28CD0026DF1C /* Star.png */; };
+		2609C1D705BB2DEB0026DF1C /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19C05BB27B20026DF1C /* Controller.h */; };
+		2609C1D805BB2DEB0026DF1C /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19D05BB27B20026DF1C /* Controller.m */; };
+		2609C1D905BB2DEB0026DF1C /* PoundView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C1A005BB27B20026DF1C /* PoundView.h */; };
+		2609C1DA05BB2DEB0026DF1C /* PoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C1A105BB27B20026DF1C /* PoundView.m */; };
+		2609C1DB05BB2DEB0026DF1C /* PoundWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C1A205BB27B20026DF1C /* PoundWindow.h */; };
+		2609C1DC05BB2DEB0026DF1C /* PoundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C1A305BB27B20026DF1C /* PoundWindow.m */; };
+		2609C1DD05BB2DEB0026DF1C /* ColorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2609C19A05BB27B20026DF1C /* ColorManager.h */; };
+		2609C1DE05BB2DEB0026DF1C /* ColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19B05BB27B20026DF1C /* ColorManager.m */; };
+		2609C29D05BB34160026DF1C /* AlphaScreenPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2609C29C05BB34160026DF1C /* AlphaScreenPrefs.nib */; };
+		2616BAD0068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 2616BACF068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h */; };
+		2616BAD1068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 2616BACF068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h */; };
+		2616BAE9068F683E00790EE5 /* NSUserDefaults+myColorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2616BAE8068F683E00790EE5 /* NSUserDefaults+myColorSupport.m */; };
+		2616BAEA068F683E00790EE5 /* NSUserDefaults+myColorSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2616BAE8068F683E00790EE5 /* NSUserDefaults+myColorSupport.m */; };
+		2616BB33069365F800790EE5 /* truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 2616BB32069365F800790EE5 /* truck.png */; };
+		2616BB34069365F800790EE5 /* truck.png in Resources */ = {isa = PBXBuildFile; fileRef = 2616BB32069365F800790EE5 /* truck.png */; };
+		2616BB530693675100790EE5 /* ducky.png in Resources */ = {isa = PBXBuildFile; fileRef = 2616BB520693675100790EE5 /* ducky.png */; };
+		2616BB540693675100790EE5 /* ducky.png in Resources */ = {isa = PBXBuildFile; fileRef = 2616BB520693675100790EE5 /* ducky.png */; };
+		26189075060CD41C000FCFF8 /* ABSaverIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 26189074060CD41C000FCFF8 /* ABSaverIcon.icns */; };
+		261890C0060CE03F000FCFF8 /* version.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A314D806017B0F0093331B /* version.m */; };
+		26247657078F9DA10065103B /* DragImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 26247655078F9DA10065103B /* DragImage.h */; };
+		26247658078F9DA10065103B /* DragImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26247656078F9DA10065103B /* DragImage.m */; };
+		26247659078F9DA10065103B /* DragImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 26247655078F9DA10065103B /* DragImage.h */; };
+		2624765A078F9DA10065103B /* DragImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 26247656078F9DA10065103B /* DragImage.m */; };
+		2660EAFA0DFB900400D349C5 /* ABApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 2660EAF80DFB900400D349C5 /* ABApplication.h */; };
+		2660EAFB0DFB900400D349C5 /* ABApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660EAF90DFB900400D349C5 /* ABApplication.m */; };
+		2660EAFC0DFB900400D349C5 /* ABApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 2660EAF80DFB900400D349C5 /* ABApplication.h */; };
+		2660EAFD0DFB900400D349C5 /* ABApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 2660EAF90DFB900400D349C5 /* ABApplication.m */; };
+		267331ED0EB9EB7A0026988C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 267331E70EB9EB7A0026988C /* InfoPlist.strings */; };
+		267331EE0EB9EB7A0026988C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 267331E90EB9EB7A0026988C /* MainMenu.nib */; };
+		267331F00EB9EB7A0026988C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 267331E70EB9EB7A0026988C /* InfoPlist.strings */; };
+		267331F10EB9EB7A0026988C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 267331E90EB9EB7A0026988C /* MainMenu.nib */; };
+		267F93150790C092004B692E /* trucks4.png in Resources */ = {isa = PBXBuildFile; fileRef = 267F93140790C092004B692E /* trucks4.png */; };
+		267F93160790C092004B692E /* trucks4.png in Resources */ = {isa = PBXBuildFile; fileRef = 267F93140790C092004B692E /* trucks4.png */; };
+		26A314D906017B0F0093331B /* version.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A314D806017B0F0093331B /* version.m */; };
+		26A314E106017DFF0093331B /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 26A314E006017DFF0093331B /* version.h */; };
+		26A4D0C305D4A27B001B2EA1 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1C005BB28CD0026DF1C /* Star.png */; };
+		26A4D0C505D4A298001B2EA1 /* Infant.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BC05BB28CD0026DF1C /* Infant.clr */; };
+		26A4D0C605D4A298001B2EA1 /* PinkDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BD05BB28CD0026DF1C /* PinkDot.png */; };
+		26A4D0C705D4A298001B2EA1 /* Primary.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BE05BB28CD0026DF1C /* Primary.clr */; };
+		26A4D0C805D4A298001B2EA1 /* Rainbow.clr in Resources */ = {isa = PBXBuildFile; fileRef = 2609C1BF05BB28CD0026DF1C /* Rainbow.clr */; };
+		26B273930D0EE984002E2048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B273920D0EE984002E2048 /* Carbon.framework */; };
+		26B273940D0EE984002E2048 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B273920D0EE984002E2048 /* Carbon.framework */; };
+		26B2932C07FCD98D000CC68E /* AlphaBaby_Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* AlphaBaby_Prefix.pch */; };
+		26DCF46C05BF2C01000075E7 /* krand.m in Sources */ = {isa = PBXBuildFile; fileRef = 2609C19F05BB27B20026DF1C /* krand.m */; };
+		26DCF47B05BF2CAF000075E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		26DE0E7505BF3A9D00C05032 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DE0E7405BF3A9D00C05032 /* ScreenSaver.framework */; };
+		26DE0EA805BF3ACC00C05032 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8D1107280486CEB800E47090 /* AlphaBaby_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* AlphaBaby_Prefix.pch */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2609C19905BB27B20026DF1C /* ABDebug.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ABDebug.h; sourceTree = "<group>"; };
+		2609C19A05BB27B20026DF1C /* ColorManager.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
+		2609C19B05BB27B20026DF1C /* ColorManager.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ColorManager.m; sourceTree = "<group>"; };
+		2609C19C05BB27B20026DF1C /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		2609C19D05BB27B20026DF1C /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; };
+		2609C19E05BB27B20026DF1C /* krand.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = krand.h; sourceTree = "<group>"; };
+		2609C19F05BB27B20026DF1C /* krand.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = krand.m; sourceTree = "<group>"; };
+		2609C1A005BB27B20026DF1C /* PoundView.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PoundView.h; sourceTree = "<group>"; };
+		2609C1A105BB27B20026DF1C /* PoundView.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PoundView.m; sourceTree = "<group>"; };
+		2609C1A205BB27B20026DF1C /* PoundWindow.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PoundWindow.h; sourceTree = "<group>"; };
+		2609C1A305BB27B20026DF1C /* PoundWindow.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PoundWindow.m; sourceTree = "<group>"; };
+		2609C1B305BB285F0026DF1C /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		2609C1BB05BB28CD0026DF1C /* ABIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ABIcon.icns; sourceTree = "<group>"; };
+		2609C1BC05BB28CD0026DF1C /* Infant.clr */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infant.clr; sourceTree = "<group>"; };
+		2609C1BD05BB28CD0026DF1C /* PinkDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PinkDot.png; sourceTree = "<group>"; };
+		2609C1BE05BB28CD0026DF1C /* Primary.clr */ = {isa = PBXFileReference; lastKnownFileType = file; path = Primary.clr; sourceTree = "<group>"; };
+		2609C1BF05BB28CD0026DF1C /* Rainbow.clr */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rainbow.clr; sourceTree = "<group>"; };
+		2609C1C005BB28CD0026DF1C /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		2609C1D205BB2D8D0026DF1C /* AlphaBabySaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaBabySaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		2609C1D305BB2D8D0026DF1C /* AlphaBabySaver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlphaBabySaver-Info.plist"; sourceTree = "<group>"; };
+		2609C29C05BB34160026DF1C /* AlphaScreenPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; path = AlphaScreenPrefs.nib; sourceTree = "<group>"; };
+		2616BACF068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+myColorSupport.h"; sourceTree = "<group>"; };
+		2616BAE8068F683E00790EE5 /* NSUserDefaults+myColorSupport.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+myColorSupport.m"; sourceTree = "<group>"; };
+		2616BB32069365F800790EE5 /* truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = truck.png; sourceTree = "<group>"; };
+		2616BB520693675100790EE5 /* ducky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ducky.png; sourceTree = "<group>"; };
+		26189074060CD41C000FCFF8 /* ABSaverIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ABSaverIcon.icns; sourceTree = "<group>"; };
+		26247655078F9DA10065103B /* DragImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragImage.h; sourceTree = "<group>"; };
+		26247656078F9DA10065103B /* DragImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragImage.m; sourceTree = "<group>"; };
+		2644F9D905E7DE970061B7B6 /* thoughts.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = thoughts.txt; sourceTree = "<group>"; };
+		2644F9DA05E7DE970061B7B6 /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		2660EAF80DFB900400D349C5 /* ABApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABApplication.h; sourceTree = "<group>"; };
+		2660EAF90DFB900400D349C5 /* ABApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABApplication.m; sourceTree = "<group>"; };
+		26652EB005ED456200F07363 /* glyphnames.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = glyphnames.txt; sourceTree = "<group>"; };
+		267331E80EB9EB7A0026988C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		267331EA0EB9EB7A0026988C /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		267F93140790C092004B692E /* trucks4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trucks4.png; sourceTree = "<group>"; };
+		26A314D806017B0F0093331B /* version.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = version.m; sourceTree = "<group>"; };
+		26A314E006017DFF0093331B /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		26B273920D0EE984002E2048 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		26DE0E7405BF3A9D00C05032 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = /System/Library/Frameworks/ScreenSaver.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* AlphaBaby_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaBaby_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* AlphaBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2609C1D005BB2D8D0026DF1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26DE0EA805BF3ACC00C05032 /* Cocoa.framework in Frameworks */,
+				26DE0E7505BF3A9D00C05032 /* ScreenSaver.framework in Frameworks */,
+				26B273930D0EE984002E2048 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				26B273940D0EE984002E2048 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2609C19C05BB27B20026DF1C /* Controller.h */,
+				2609C19D05BB27B20026DF1C /* Controller.m */,
+				26247655078F9DA10065103B /* DragImage.h */,
+				26247656078F9DA10065103B /* DragImage.m */,
+				2616BACF068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h */,
+				2616BAE8068F683E00790EE5 /* NSUserDefaults+myColorSupport.m */,
+				2609C1A005BB27B20026DF1C /* PoundView.h */,
+				2609C1A105BB27B20026DF1C /* PoundView.m */,
+				2609C1A205BB27B20026DF1C /* PoundWindow.h */,
+				2609C1A305BB27B20026DF1C /* PoundWindow.m */,
+				2609C19A05BB27B20026DF1C /* ColorManager.h */,
+				2609C19B05BB27B20026DF1C /* ColorManager.m */,
+				2660EAF80DFB900400D349C5 /* ABApplication.h */,
+				2660EAF90DFB900400D349C5 /* ABApplication.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26B273920D0EE984002E2048 /* Carbon.framework */,
+				26DE0E7405BF3A9D00C05032 /* ScreenSaver.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* AlphaBaby.app */,
+				2609C1D205BB2D8D0026DF1C /* AlphaBabySaver.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2644F9D605E7DCFD0061B7B6 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				2644F9D905E7DE970061B7B6 /* thoughts.txt */,
+				2644F9DA05E7DE970061B7B6 /* todo.txt */,
+				26652EB005ED456200F07363 /* glyphnames.txt */,
+			);
+			name = Docs;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AlphaBaby */ = {
+			isa = PBXGroup;
+			children = (
+				2644F9D605E7DCFD0061B7B6 /* Docs */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AlphaBaby;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				26A314E006017DFF0093331B /* version.h */,
+				26A314D806017B0F0093331B /* version.m */,
+				2609C19905BB27B20026DF1C /* ABDebug.h */,
+				2609C19E05BB27B20026DF1C /* krand.h */,
+				2609C19F05BB27B20026DF1C /* krand.m */,
+				32CA4F630368D1EE00C91783 /* AlphaBaby_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2609C1D305BB2D8D0026DF1C /* AlphaBabySaver-Info.plist */,
+				267331E70EB9EB7A0026988C /* InfoPlist.strings */,
+				267331E90EB9EB7A0026988C /* MainMenu.nib */,
+				2616BB520693675100790EE5 /* ducky.png */,
+				267F93140790C092004B692E /* trucks4.png */,
+				2616BB32069365F800790EE5 /* truck.png */,
+				26189074060CD41C000FCFF8 /* ABSaverIcon.icns */,
+				2609C29C05BB34160026DF1C /* AlphaScreenPrefs.nib */,
+				2609C1BB05BB28CD0026DF1C /* ABIcon.icns */,
+				2609C1BC05BB28CD0026DF1C /* Infant.clr */,
+				2609C1BD05BB28CD0026DF1C /* PinkDot.png */,
+				2609C1BE05BB28CD0026DF1C /* Primary.clr */,
+				2609C1BF05BB28CD0026DF1C /* Rainbow.clr */,
+				2609C1C005BB28CD0026DF1C /* Star.png */,
+				2609C1B305BB285F0026DF1C /* Credits.html */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2609C1CD05BB2D8D0026DF1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2609C1DD05BB2DEB0026DF1C /* ColorManager.h in Headers */,
+				2609C1DB05BB2DEB0026DF1C /* PoundWindow.h in Headers */,
+				2609C1D905BB2DEB0026DF1C /* PoundView.h in Headers */,
+				2609C1D705BB2DEB0026DF1C /* Controller.h in Headers */,
+				2616BAD0068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h in Headers */,
+				26247657078F9DA10065103B /* DragImage.h in Headers */,
+				2660EAFC0DFB900400D349C5 /* ABApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107270486CEB800E47090 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1107280486CEB800E47090 /* AlphaBaby_Prefix.pch in Headers */,
+				2609C1A405BB27B20026DF1C /* ABDebug.h in Headers */,
+				2609C1A505BB27B20026DF1C /* ColorManager.h in Headers */,
+				2609C1A705BB27B20026DF1C /* Controller.h in Headers */,
+				2609C1A905BB27B20026DF1C /* krand.h in Headers */,
+				2609C1AB05BB27B20026DF1C /* PoundView.h in Headers */,
+				2609C1AD05BB27B20026DF1C /* PoundWindow.h in Headers */,
+				26A314E106017DFF0093331B /* version.h in Headers */,
+				2616BAD1068F67AC00790EE5 /* NSUserDefaults+myColorSupport.h in Headers */,
+				26247659078F9DA10065103B /* DragImage.h in Headers */,
+				2660EAFA0DFB900400D349C5 /* ABApplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2609C1D105BB2D8D0026DF1C /* AlphaBabySaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26BE75B00998EDAD000EE506 /* Build configuration list for PBXNativeTarget "AlphaBabySaver" */;
+			buildPhases = (
+				2609C1CD05BB2D8D0026DF1C /* Headers */,
+				2609C1CE05BB2D8D0026DF1C /* Resources */,
+				2609C1CF05BB2D8D0026DF1C /* Sources */,
+				2609C1D005BB2D8D0026DF1C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlphaBabySaver;
+			productName = AlphaBabySaver;
+			productReference = 2609C1D205BB2D8D0026DF1C /* AlphaBabySaver.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* AlphaBaby */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26BE75AB0998EDAD000EE506 /* Build configuration list for PBXNativeTarget "AlphaBaby" */;
+			buildPhases = (
+				8D1107270486CEB800E47090 /* Headers */,
+				8D1107290486CEB800E47090 /* Resources */,
+				26A314CF0601765F0093331B /* ShellScript */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlphaBaby;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AlphaBaby;
+			productReference = 8D1107320486CEB800E47090 /* AlphaBaby.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 26BE75B50998EDAD000EE506 /* Build configuration list for PBXProject "AlphaBaby" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AlphaBaby */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* AlphaBaby */,
+				2609C1D105BB2D8D0026DF1C /* AlphaBabySaver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2609C1CE05BB2D8D0026DF1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26189075060CD41C000FCFF8 /* ABSaverIcon.icns in Resources */,
+				26A4D0C505D4A298001B2EA1 /* Infant.clr in Resources */,
+				26A4D0C605D4A298001B2EA1 /* PinkDot.png in Resources */,
+				26A4D0C705D4A298001B2EA1 /* Primary.clr in Resources */,
+				26A4D0C805D4A298001B2EA1 /* Rainbow.clr in Resources */,
+				26A4D0C305D4A27B001B2EA1 /* Star.png in Resources */,
+				2609C29D05BB34160026DF1C /* AlphaScreenPrefs.nib in Resources */,
+				2616BB33069365F800790EE5 /* truck.png in Resources */,
+				2616BB530693675100790EE5 /* ducky.png in Resources */,
+				267F93150790C092004B692E /* trucks4.png in Resources */,
+				26B2932C07FCD98D000CC68E /* AlphaBaby_Prefix.pch in Resources */,
+				267331F00EB9EB7A0026988C /* InfoPlist.strings in Resources */,
+				267331F10EB9EB7A0026988C /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2609C1B405BB285F0026DF1C /* Credits.html in Resources */,
+				2609C1C105BB28CD0026DF1C /* ABIcon.icns in Resources */,
+				2609C1C205BB28CD0026DF1C /* Infant.clr in Resources */,
+				2609C1C305BB28CD0026DF1C /* PinkDot.png in Resources */,
+				2609C1C405BB28CD0026DF1C /* Primary.clr in Resources */,
+				2609C1C505BB28CD0026DF1C /* Rainbow.clr in Resources */,
+				2609C1C605BB28CD0026DF1C /* Star.png in Resources */,
+				2616BB34069365F800790EE5 /* truck.png in Resources */,
+				2616BB540693675100790EE5 /* ducky.png in Resources */,
+				267F93160790C092004B692E /* trucks4.png in Resources */,
+				267331ED0EB9EB7A0026988C /* InfoPlist.strings in Resources */,
+				267331EE0EB9EB7A0026988C /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26A314CF0601765F0093331B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				main.m,
+				Controller.m,
+				krand.m,
+				PoundView.m,
+				ColorManager.m,
+			);
+			outputPaths = (
+				version.m,
+				buildnum,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "i=`cat buildnum`\n((i = i + 1))\necho \"#import <Cocoa/Cocoa.h>\" > version.m\necho \"int buildnum = $i;\" >> version.m\necho $i > buildnum\nd=`date`\necho \"NSString *builddate = @\\\"$d\\\";\" >> version.m\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2609C1CF05BB2D8D0026DF1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261890C0060CE03F000FCFF8 /* version.m in Sources */,
+				26DCF47B05BF2CAF000075E7 /* main.m in Sources */,
+				26DCF46C05BF2C01000075E7 /* krand.m in Sources */,
+				2609C1D805BB2DEB0026DF1C /* Controller.m in Sources */,
+				2609C1DA05BB2DEB0026DF1C /* PoundView.m in Sources */,
+				2609C1DC05BB2DEB0026DF1C /* PoundWindow.m in Sources */,
+				2609C1DE05BB2DEB0026DF1C /* ColorManager.m in Sources */,
+				2616BAE9068F683E00790EE5 /* NSUserDefaults+myColorSupport.m in Sources */,
+				26247658078F9DA10065103B /* DragImage.m in Sources */,
+				2660EAFD0DFB900400D349C5 /* ABApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2609C1A605BB27B20026DF1C /* ColorManager.m in Sources */,
+				2609C1A805BB27B20026DF1C /* Controller.m in Sources */,
+				2609C1AA05BB27B20026DF1C /* krand.m in Sources */,
+				2609C1AC05BB27B20026DF1C /* PoundView.m in Sources */,
+				2609C1AE05BB27B20026DF1C /* PoundWindow.m in Sources */,
+				26A314D906017B0F0093331B /* version.m in Sources */,
+				2616BAEA068F683E00790EE5 /* NSUserDefaults+myColorSupport.m in Sources */,
+				2624765A078F9DA10065103B /* DragImage.m in Sources */,
+				2660EAFB0DFB900400D349C5 /* ABApplication.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		267331E70EB9EB7A0026988C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267331E80EB9EB7A0026988C /* English */,
+			);
+			name = InfoPlist.strings;
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
+		267331E90EB9EB7A0026988C /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267331EA0EB9EB7A0026988C /* English */,
+			);
+			name = MainMenu.nib;
+			path = English.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26B276010D1836B1002E2048 /* Deploy - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = "Deploy - Small Screen";
+		};
+		26B276020D1836B1002E2048 /* Deploy - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AlphaBaby_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "FULLSCREEN=0";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AlphaBaby;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = "Deploy - Small Screen";
+		};
+		26B276030D1836B1002E2048 /* Deploy - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ALPHABABY_DEBUG,
+					"FULLSCREEN=0",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "AlphaBabySaver-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Screen Savers";
+				OTHER_CFLAGS = "-DALPHABABY_SCREENSAVER";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AlphaBabySaver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = YES;
+			};
+			name = "Deploy - Small Screen";
+		};
+		26BE75AC0998EDAD000EE506 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AlphaBaby_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = ALPHABABY_DEBUG;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AlphaBaby;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		26BE75AD0998EDAD000EE506 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AlphaBaby_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AlphaBaby;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		26BE75AE0998EDAD000EE506 /* Debug - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AlphaBaby_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ALPHABABY_DEBUG,
+					"FULLSCREEN=0",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AlphaBaby;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = "Debug - Small Screen";
+		};
+		26BE75AF0998EDAD000EE506 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = AlphaBaby_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = AlphaBaby;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		26BE75B10998EDAD000EE506 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ALPHABABY_DEBUG;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "AlphaBabySaver-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Screen Savers";
+				OTHER_CFLAGS = "-DALPHABABY_SCREENSAVER";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AlphaBabySaver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		26BE75B20998EDAD000EE506 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "AlphaBabySaver-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Screen Savers";
+				OTHER_CFLAGS = "-DALPHABABY_SCREENSAVER";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AlphaBabySaver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		26BE75B30998EDAD000EE506 /* Debug - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ALPHABABY_DEBUG,
+					"FULLSCREEN=0",
+				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "AlphaBabySaver-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Screen Savers";
+				OTHER_CFLAGS = "-DALPHABABY_SCREENSAVER";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AlphaBabySaver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = saver;
+				ZERO_LINK = YES;
+			};
+			name = "Debug - Small Screen";
+		};
+		26BE75B40998EDAD000EE506 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = "AlphaBabySaver-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Screen Savers";
+				OTHER_CFLAGS = "-DALPHABABY_SCREENSAVER";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = AlphaBabySaver;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Default;
+		};
+		26BE75B60998EDAD000EE506 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_ENABLE_OBJC_GC = supported;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Development;
+		};
+		26BE75B70998EDAD000EE506 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_ENABLE_OBJC_GC = supported;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Deployment;
+		};
+		26BE75B80998EDAD000EE506 /* Debug - Small Screen */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_ENABLE_OBJC_GC = supported;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = "Debug - Small Screen";
+		};
+		26BE75B90998EDAD000EE506 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_64_BIT_PRE_XCODE_3_1 = "x86_64 i386 ppc";
+				GCC_ENABLE_OBJC_GC = supported;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26BE75AB0998EDAD000EE506 /* Build configuration list for PBXNativeTarget "AlphaBaby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BE75AC0998EDAD000EE506 /* Development */,
+				26BE75AD0998EDAD000EE506 /* Deployment */,
+				26BE75AE0998EDAD000EE506 /* Debug - Small Screen */,
+				26B276020D1836B1002E2048 /* Deploy - Small Screen */,
+				26BE75AF0998EDAD000EE506 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		26BE75B00998EDAD000EE506 /* Build configuration list for PBXNativeTarget "AlphaBabySaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BE75B10998EDAD000EE506 /* Development */,
+				26BE75B20998EDAD000EE506 /* Deployment */,
+				26BE75B30998EDAD000EE506 /* Debug - Small Screen */,
+				26B276030D1836B1002E2048 /* Deploy - Small Screen */,
+				26BE75B40998EDAD000EE506 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		26BE75B50998EDAD000EE506 /* Build configuration list for PBXProject "AlphaBaby" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26BE75B60998EDAD000EE506 /* Development */,
+				26BE75B70998EDAD000EE506 /* Deployment */,
+				26BE75B80998EDAD000EE506 /* Debug - Small Screen */,
+				26B276010D1836B1002E2048 /* Deploy - Small Screen */,
+				26BE75B90998EDAD000EE506 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
