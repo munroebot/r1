@@ -32,6 +32,9 @@ tman () {
     MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
 }
 
+vman () {
+    MANWIDTH=80 MANPAGER='col -bx' man $@ | mvim -
+}
 
 # /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
 
