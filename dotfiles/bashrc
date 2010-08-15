@@ -1,5 +1,5 @@
 # distributed platform dot-bashrc file
-# last modified: 2010-05-11
+# last modified: 2010-08-14
 
 export GPG_HOME=/usr/local/gnupg-1.4.10
 export MYSQL_HOME=/usr/local/mysql
@@ -12,11 +12,16 @@ export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
 export PATH=$GPG_HOME/bin:$PATH
 
+export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
 export EDITOR="mvim -N"
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
+
+#------------------------------------
+# Moonshine Recipe File Management
+#------------------------------------
 
 MOONSHINE_TXT="$HOME/r1/moonshine-recipe.txt"
 MOONSHINE_TXT_ASC="$HOME/r1/moonshine-recipe.txt.asc"
@@ -36,5 +41,10 @@ vman () {
     MANWIDTH=80 MANPAGER='col -bx' man $@ | mvim -
 }
 
+## Prevent the creation of .DS_Store
+## files on Network volumes in MacOS:
+## (Restart the computer for the change to take effect)
+
+# defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
 
