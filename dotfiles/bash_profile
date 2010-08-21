@@ -1,1 +1,2 @@
 source ~/.bashrc
+source ~/r1/dotfiles/git-completion.bash
