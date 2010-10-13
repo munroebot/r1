@@ -21,6 +21,7 @@ export MVN_OPTS="-client"
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
+alias flush_dns_cache='dscacheutil -flushcache'
 
 #------------------------------------
 # Moonshine Recipe File Management
