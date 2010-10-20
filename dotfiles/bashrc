@@ -1,23 +1,26 @@
 # distributed platform dot-bashrc file
-# last modified: 2010-08-14
+# last modified: 2010-10-20
 
 export GPG_HOME=/usr/local/gnupg-1.4.10
 export MYSQL_HOME=/usr/local/mysql
 export GRAILS_HOME=$HOME/grails-1.3.4
 export JYTHON_HOME=$HOME/jython-2.5.1
 export M2_HOME=$HOME/apache-maven-2.2.1
+export GIT_UTIL_HOME=$HOME/r1/dotfiles
 
 MOONSHINE_TXT="$HOME/r1/moonshine-recipe.txt"
 MOONSHINE_TXT_ASC="$HOME/r1/moonshine-recipe.txt.asc"
 
 export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
-export PATH=$GPG_HOME/bin:$PATH
+export PATH=$GPG_HOME/bin:$GIT_UTILS_HOME/:$PATH
 
 export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
 export EDITOR="mvim -N"
 export MVN_OPTS="-client"
+
+source $GIT_UTILS/git-completion.bash
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
@@ -39,6 +42,11 @@ psd() {
 greppw() {
     gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 "$@";
 }
+
+
+#------------------------------------
+# Misc Functions
+#------------------------------------
 
 pman () {
     man -t "${1}" | open -f -a /Applications/Preview.app
