@@ -6,27 +6,30 @@ try:
 except ImportError:  
   from elementtree import ElementTree
 
-import gdata.spreadsheet.service
-import gdata.service
-import atom.service
-import gdata.spreadsheet
+#import gdata.service
 import atom
+import atom.service
+import gdata.contacts
+import gdata.contacts.service
+import gdata.spreadsheet
+import gdata.spreadsheet.service
+
 
 class Contact(object):
 
     def __init__(self):
 
-        self._first_name = ""
-        self._last_name = ""
-        self._home_address = ""
-        self._home_city = ""
-        self._home_state = ""
-        self._home_zip = ""
-        self._home_phone = ""
-        self._mobile_phone = ""
-        self._work_phone = ""
-        self._home_email = ""
-        self._work_email = ""
+        self._first_name = None 
+        self._last_name =  None
+        self._home_address = None 
+        self._home_city = None
+        self._home_state = None 
+        self._home_zip = None
+        self._home_phone = None
+        self._mobile_phone = None
+        self._work_phone = None
+        self._home_email = None
+        self._work_email = None
 
     @property
     def first_name(self):
@@ -43,6 +46,13 @@ class Contact(object):
     @last_name.setter
     def last_name(self,value):
         self._last_name = value
+
+    @property
+    def full_name(self):
+        if self._first_name != None and self._last_name != None:
+            return "%s %s" % (self._first_name, self._last_name)
+        else:
+            return self._first_name
 
     @property
     def home_address(self):
@@ -78,8 +88,10 @@ class Contact(object):
 
     @property
     def full_home_address(self):
-        return self._home_address + ", " + self._home_city + ", " + \
-        self._home_state + ", " + self._home_zip 
+        if self._home_address != None and self.home_city != None and self._home_state != None and self._home_zip != None:
+            return "%s, %s, %s, %s" % (self._home_address, self._home_city, self._home_state, self._home_zip)
+        else:
+            return None
 
     @property
     def home_phone(self):
@@ -132,6 +144,12 @@ class ContactBridge(object):
         self.s_client.password = password
         self.s_client.ProgrammaticLogin()
 
+        self.c_client = gdata.contacts.service.ContactsService()
+        self.c_client.email = email
+        self.c_client.password = password
+        self.c_client.ProgrammaticLogin()
+
+
         # Initialize Spreadsheet -> Worksheet object
         self.s_client_query = gdata.spreadsheet.service.DocumentQuery()
         self.s_client_query['title-exact'] = 'true'
@@ -176,7 +194,7 @@ class ContactBridge(object):
                 if key == 'homephone':
                     c.home_phone = entry.custom[key].text
            
-                if key == 'mobiephone':
+                if key == 'mobilephone':
                     c.mobile_phone = entry.custom[key].text
 
                 if key == 'workphone':
@@ -191,12 +209,43 @@ class ContactBridge(object):
             contact_list.append(c)
    
         return contact_list
+    
+    def push_to_gcontacts(self,contacts):
+ 
+        i = 0 
+        
+        for x in contacts:
 
+            c1 = gdata.contacts.ContactEntry(title=atom.Title(text=x.full_name))
+
+            if (x.home_email != None):
+                c1.email.append(gdata.contacts.Email(address=x.home_email,primary='true', rel=gdata.contacts.REL_HOME))
+            
+            if (x.work_email != None):
+                c1.email.append(gdata.contacts.Email(address=x.work_email,rel=gdata.contacts.REL_WORK))
+
+            if (x.full_home_address != None):
+                c1.structured_postal_address.append(gdata.contacts.PostalAddress(primary='true',text=x.full_home_address, rel=gdata.contacts.REL_HOME))
+
+            if (x.home_phone != None):
+                c1.phone_number.append(gdata.contacts.PhoneNumber(primary='true',text=x.home_phone,rel=gdata.contacts.REL_HOME))
+            
+            if (x.mobile_phone != None):
+                c1.phone_number.append(gdata.contacts.PhoneNumber(text=x.mobile_phone,rel=gdata.contacts.PHONE_MOBILE))
+
+            self.c_client.CreateContact(c1)
+            i += 1
+        
+        print "Pushed %d spreadsheet contacts into Google Contacts" % (i)
+ 
 def main():
-    cb1 = ContactBridge(email='',password='',spreadsheet='Addressbook',worksheet='master')
+
+    e = ''
+    p = ''
+
+    cb1 = ContactBridge(email=e,password=p,spreadsheet='Addressbook',worksheet='master')
     contacts = cb1.get_spreadsheet_contacts()
-    #print contacts[11].full_home_address
-    #cb1.import_to_google_contacts(contacts)
+    cb1.push_to_gcontacts(contacts)
 
 if __name__ == '__main__': main()
 
