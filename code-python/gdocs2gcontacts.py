@@ -195,8 +195,8 @@ class ContactBridge(object):
 def main():
     cb1 = ContactBridge(email='',password='',spreadsheet='Addressbook',worksheet='master')
     contacts = cb1.get_spreadsheet_contacts()
-    print contacts[11].full_home_address
-    #cb1.import_into_google_contacts(contacts)
+    #print contacts[11].full_home_address
+    #cb1.import_to_google_contacts(contacts)
 
 if __name__ == '__main__': main()
 
