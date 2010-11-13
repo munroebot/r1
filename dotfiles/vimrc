@@ -24,7 +24,6 @@ set modeline
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set statusline=%t\ %y\ format:\ %{&ff};\ [%c,%l]
 set guifont=Monaco:h12
 
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
