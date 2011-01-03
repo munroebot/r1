@@ -3,7 +3,7 @@ from win32com.client import Dispatch
 import sys
 
 session = Dispatch('Lotus.NotesSession')
-session.Initialize('b47z805x')
+session.Initialize('password')
 
 fileCount = 0
 
