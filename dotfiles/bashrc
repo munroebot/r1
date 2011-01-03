@@ -1,5 +1,5 @@
 # distributed platform dot-bashrc file
-# last modified: 2010-10-20
+# last modified: 2011-01-03
 
 export GPG_HOME=/usr/local/gnupg-1.4.10
 export MYSQL_HOME=/usr/local/mysql
@@ -58,6 +58,31 @@ tman () {
 
 vman () {
     MANWIDTH=80 MANPAGER='col -bx' man $@ | mvim -
+}
+
+function restart_tomcat {
+    
+    process=`ps -A | grep -i ${1} | grep -v bash | grep -v grep`;
+    echo "${process}";
+    echo "";
+
+    catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
+    pid_regex="^([[:digit:]]*)";
+
+    if [[ $process =~ $catalina_home_regex ]]; then
+        catalina_home=${BASH_REMATCH[1]}; 
+    fi
+
+    if [[ $process =~ $pid_regex ]]; then
+        pid=${BASH_REMATCH[0]};
+    fi
+
+    echo "Restarting ${catalina_home}...";
+    echo "Killing process ${pid}...";
+    kill -9 ${pid};
+    sleep 3;
+    echo "Starting ${catalina_home}...";
+    ${catalina_home}/bin/startup.sh;
 }
 
 ## Prevent the creation of .DS_Store
