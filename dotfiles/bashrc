@@ -61,10 +61,14 @@ vman () {
 }
 
 function restart_tomcat {
-    
-    process=`ps -A | grep -i ${1} | grep -v bash | grep -v grep`;
-    echo "${process}";
-    echo "";
+
+    if [ $MACHTYPE = "x86_64-apple-darwin10.0" ]; then
+        process=`ps -a | grep ${1} | grep -v grep | grep -v bash`;
+        user=$USER
+    else
+        process=`ps -afe | grep "${catalina_home}" | grep -v grep | grep -v bash | tr -s " " "%"  | cut -d% -f2`;
+        user="tomcat"
+    fi
 
     catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
     pid_regex="^([[:digit:]]*)";
@@ -77,9 +81,15 @@ function restart_tomcat {
         pid=${BASH_REMATCH[0]};
     fi
 
+    echo "Found the following tomcat(s) to restart:"
+    echo "${process}";
+    echo "";
+    echo "Hit Ctrl+C to cancel with in 3 seconds...";
+    sleep 3;
+
     echo "Restarting ${catalina_home}...";
     echo "Killing process ${pid}...";
-    kill -9 ${pid};
+    sudo -u ${user} kill -9 ${pid};
     sleep 3;
     echo "Starting ${catalina_home}...";
     ${catalina_home}/bin/startup.sh;
