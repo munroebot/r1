@@ -21,6 +21,7 @@ export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
 export EDITOR="mvim -N"
 export MVN_OPTS="-client"
+# export COMMAND_MODE=unix2003
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
@@ -32,14 +33,14 @@ alias flush_dns_cache='dscacheutil -flushcache'
 
 alias psc="gpg --no-use-agent -i -a -c --cipher-algo AES256 $MOONSHINE_TXT"
 
-psd() {
+function psd {
     gpg --no-use-agent --decrypt -o $MOONSHINE_TXT $MOONSHINE_TXT_ASC;
     vim $MOONSHINE_TXT;
     psc;
     rm -f $MOONSHINE_TXT;
 }
 
-greppw() {
+function greppw {
     gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 "$@";
 }
 
@@ -48,30 +49,26 @@ greppw() {
 # Misc Functions
 #------------------------------------
 
-pman () {
+function pman {
     man -t "${1}" | open -f -a /Applications/Preview.app
 }
 
-tman () {
-    MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
-}
-
-vman () {
+function vman {
     MANWIDTH=80 MANPAGER='col -bx' man $@ | mvim -
 }
 
 function restart_tomcat {
 
     if [ $MACHTYPE = "x86_64-apple-darwin10.0" ]; then
-        process=`ps -a | grep ${1} | grep -v grep | grep -v bash`;
-        user=$USER
+        process=`ps -A | grep ${1} | grep -v grep | grep -v bash`;
+        user=${USER};
     else
-        process=`ps -afe | grep "${catalina_home}" | grep -v grep | grep -v bash | tr -s " " "%"  | cut -d% -f2`;
-        user="tomcat"
+        process=`ps -eo pid,cmd | grep ${1} | grep -v grep | grep -v bash`;
+        user="tomcat";
     fi
 
     catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
-    pid_regex="^([[:digit:]]*)";
+    pid_regex="^([[:space:][:digit:]]*)";
 
     if [[ $process =~ $catalina_home_regex ]]; then
         catalina_home=${BASH_REMATCH[1]}; 
