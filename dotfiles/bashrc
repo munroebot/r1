@@ -23,6 +23,8 @@ export EDITOR="mvim -N"
 export MVN_OPTS="-client"
 # export COMMAND_MODE=unix2003
 
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
 alias ls='ls -G'
 alias apg='apg -M SNCL'
 alias flush_dns_cache='dscacheutil -flushcache'
