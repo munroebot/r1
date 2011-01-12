@@ -31,7 +31,9 @@ alias flush_dns_cache='dscacheutil -flushcache'
 # Moonshine Recipe File Management
 #------------------------------------
 
-alias psc="gpg --no-use-agent -i -a -c --cipher-algo AES256 $MOONSHINE_TXT"
+function psc {
+    gpg --no-use-agent -i -a -c --cipher-algo AES256 $MOONSHINE_TXT;
+}
 
 function psd {
     gpg --no-use-agent --decrypt -o $MOONSHINE_TXT $MOONSHINE_TXT_ASC;
@@ -41,7 +43,7 @@ function psd {
 }
 
 function greppw {
-    gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 "$@";
+    gpg --no-use-agent --decrypt $MOONSHINE_TXT_ASC | grep -i --color=auto -C 6 "$*";
 }
 
 
