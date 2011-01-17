@@ -64,27 +64,32 @@ function restart_tomcat {
     catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
     pid_regex="^([[:alpha:]]+)[[:space:]]+([[:digit:]]+)";
 
-    if [[ $process =~ $catalina_home_regex ]]; then
+    if [[ $process =~ $catalina_home_regex ]] ; then
         catalina_home=${BASH_REMATCH[1]};
     fi
 
-    if [[ $process =~ $pid_regex ]]; then
+    if [[ $process =~ $pid_regex ]] ; then
         user=${BASH_REMATCH[1]};
         pid=${BASH_REMATCH[2]};
     fi
-    
-    echo "Found the following tomcat(s) to restart:"
+
+    echo "";
+    echo "-----------------------------------------";
+    echo "Found the following tomcat(s) to restart:";
+    echo "-----------------------------------------";
+    echo "";
     echo "${process}";
     echo "";
     echo "Hit Ctrl+C to cancel with in 3 seconds...";
+
     sleep 3;
 
-    echo "Restarting ${catalina_home}...";
-    echo "Killing process ${pid}...";
+    echo "Stopping ${catalina_home}...(PID=${pid})";
     sudo -u ${user} kill -9 ${pid};
     sleep 3;
     echo "Starting ${catalina_home}...";
     ${catalina_home}/bin/startup.sh;
+    echo "";
 }
 
 ## Prevent the creation of .DS_Store
