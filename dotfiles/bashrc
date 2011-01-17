@@ -90,6 +90,7 @@ function restart_tomcat {
     echo "Starting ${catalina_home}...";
     ${catalina_home}/bin/startup.sh;
     echo "";
+
 }
 
 ## Prevent the creation of .DS_Store
