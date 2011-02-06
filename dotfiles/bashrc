@@ -90,7 +90,7 @@ function restart_tomcat {
     echo "Hit Ctrl+C to cancel with in ${TOMCAT_RS_SLEEP} seconds...";
     echo "";
 
-   sleep ${TOMCAT_RS_SLEEP};
+    sleep ${TOMCAT_RS_SLEEP};
 
     echo "Stopping ${catalina_home}...(PID=${pid})";
     sudo -u ${user} kill -9 ${pid};
