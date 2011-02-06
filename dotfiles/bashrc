@@ -68,6 +68,11 @@ function restart_tomcat {
 
     process=`ps aux | grep ${1} | grep -v grep | grep -v bash`;
 
+    if [[ -z ${process} ]] ; then
+        echo "No tomcat instances found matching that pattern...";
+        return -1;
+    fi
+
     catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
     pid_regex="^([[:alpha:]]+)[[:space:]]+([[:digit:]]+)";
 
