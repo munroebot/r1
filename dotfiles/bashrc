@@ -59,7 +59,19 @@ function vman {
 
 function restart_tomcat {
 
+    TOMCAT_RS_SLEEP=3;
+
+    if [[ -z ${1} ]] ; then
+        echo "Usage: restart_tomcat <some_pattern_matching_catalina_home>";
+        return -1;
+    fi
+
     process=`ps aux | grep ${1} | grep -v grep | grep -v bash`;
+
+    if [[ -z ${process} ]] ; then
+        echo "No tomcat instances found matching that pattern...";
+        return -1;
+    fi
 
     catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
     pid_regex="^([[:alpha:]]+)[[:space:]]+([[:digit:]]+)";
@@ -80,13 +92,15 @@ function restart_tomcat {
     echo "";
     echo "${process}";
     echo "";
-    echo "Hit Ctrl+C to cancel with in 3 seconds...";
+    echo "Hit Ctrl+C to cancel with in ${TOMCAT_RS_SLEEP} seconds...";
+    echo "";
 
-    sleep 3;
+    sleep ${TOMCAT_RS_SLEEP};
 
     echo "Stopping ${catalina_home}...(PID=${pid})";
     sudo -u ${user} kill -9 ${pid};
     sleep 3;
+    echo "";
     echo "Starting ${catalina_home}...";
     ${catalina_home}/bin/startup.sh;
     echo "";
