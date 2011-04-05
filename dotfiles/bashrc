@@ -25,6 +25,18 @@ alias ls='ls -G'
 alias apg='apg -M SNCL'
 alias flush_dns_cache='dscacheutil -flushcache'
 
+shopt -s progcomp
+
+_myprog() {
+    local curw
+    COMPREPLY=()
+    curw=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=($(compgen -A user -- $curw))
+    return 0
+}
+
+complete -F _myprog -o dirnames myprog
+
 #------------------------------------
 # Moonshine Recipe File Management
 #------------------------------------
