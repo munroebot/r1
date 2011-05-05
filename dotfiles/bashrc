@@ -15,7 +15,7 @@ export PATH=$PYTHON3_HOME/bin:$PATH
 
 export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
-export EDITOR="mvim -N"
+export EDITOR="mvim -N -f"
 export MVN_OPTS="-client"
 # export COMMAND_MODE=unix2003
 
