@@ -6,7 +6,7 @@ export MYSQL_HOME=/usr/local/mysql
 export JYTHON_HOME=$HOME/jython-2.5.1
 export M2_HOME=$HOME/apache-maven-2.2.1
 export GIT_UTIL_HOME=$HOME/r1/dotfiles
-export PYTHON3_HOME=/Library/Frameworks/Python.framework/Versions/3.1
+export PYTHON3_HOME=/Library/Frameworks/Python.framework/Versions/3.2
 
 export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$GRAILS_HOME/bin:$GROOVY_HOME/bin:$JYTHON_HOME/bin:$PATH
