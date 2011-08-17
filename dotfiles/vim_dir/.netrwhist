@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/bmunroe/synshop_door/auth_daemon'
-let g:netrw_dirhist_2='/Users/bmunroe/r1/code-python'
-let g:netrw_dirhist_3='/Users/bmunroe/r1'
-let g:netrw_dirhist_4='/Users/bmunroe/r1/code-java'
-let g:netrw_dirhist_5='/Users/bmunroe'
