@@ -17,7 +17,8 @@ if version >= 500
   set hlsearch
 endif
 
-colorscheme darkblue
+colorscheme twilight2
+
 set number
 set modeline
 
