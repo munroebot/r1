@@ -9,7 +9,6 @@ try:
 except xdrlib.ConversionError, instance:
     print 'packing the double failed:', instance.msg
 
-
 class Person(object):
     def __init__(self):
         self.first_name = None

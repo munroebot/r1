@@ -21,11 +21,30 @@ export EDITOR="mvim -N -f"
 export MVN_OPTS="-client"
 # export COMMAND_MODE=unix2003
 
+export WORKON_HOME=$HOME/.virtualenvs
+source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 alias ls='ls -G'
 alias apg='apg -M SNCL'
 alias flush_dns_cache='dscacheutil -flushcache'
+
+# virtualenv aliases
+# http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
+alias v='workon'
+alias v.deactivate='deactivate'
+alias v.mk='mkvirtualenv --no-site-packages'
+alias v.mk_withsitepackages='mkvirtualenv'
+alias v.rm='rmvirtualenv'
+alias v.switch='workon'
+alias v.add2virtualenv='add2virtualenv'
+alias v.cdsitepackages='cdsitepackages'
+alias v.cd='cdvirtualenv'
+alias v.lssitepackages='lssitepackages'
 
 shopt -s progcomp
 
