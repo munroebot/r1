@@ -1,6 +1,6 @@
 set nocompatible
 set backspace=indent,eol,start
-set textwidth=82
+set textwidth=108
 
 set autoindent
 
@@ -14,7 +14,7 @@ if version >= 500
 
   if !exists("syntax_on")
     syntax on
-    colorscheme twilight2
+    colorscheme darkblue
   endif
 
   set hlsearch
@@ -43,5 +43,5 @@ function! StartUp()
     end
 endfunction
 
-autocmd VimEnter * call StartUp()
+" autocmd VimEnter * call StartUp()
 
