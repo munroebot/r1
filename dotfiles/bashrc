@@ -18,6 +18,7 @@ export MVN_OPTS="-client"
 # export COMMAND_MODE=unix2003
 
 export WORKON_HOME=$HOME/.virtualenvs
+# source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper.sh
 
 export CLICOLOR=1
