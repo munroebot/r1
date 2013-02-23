@@ -6,7 +6,6 @@ try:
 except ImportError:  
   from elementtree import ElementTree
 
-#import gdata.service
 import atom
 import atom.service
 import gdata.contacts
@@ -14,12 +13,14 @@ import gdata.contacts.service
 import gdata.spreadsheet
 import gdata.spreadsheet.service
 
+import csv
 
 class Contact(object):
 
     def __init__(self):
 
-        self._first_name = None 
+        self._first_name = None
+        self._partner_name = None
         self._last_name =  None
         self._home_address = None 
         self._home_city = None
@@ -38,6 +39,14 @@ class Contact(object):
     @first_name.setter
     def first_name(self,value):
         self._first_name = value
+
+    @property
+    def partner_name(self):
+        return self._partner_name
+    
+    @partner_name.setter
+    def partner_name(self,value):
+        self._partner_name = value
 
     @property
     def last_name(self):
@@ -134,6 +143,16 @@ class Contact(object):
         self._work_email = value
 
 
+def is_gmail_contact(entry):
+    
+    return_value = True
+    is_gmail = entry.custom['gmail'].text
+
+    if is_gmail != None and (is_gmail == 'n' or is_gmail == 'N'):
+        return_value = False
+
+    return return_value
+ 
 class ContactBridge(object):
 
     def __init__(self,email=None,password=None,spreadsheet=None,worksheet=None):
@@ -148,7 +167,6 @@ class ContactBridge(object):
         self.c_client.email = email
         self.c_client.password = password
         self.c_client.ProgrammaticLogin()
-
 
         # Initialize Spreadsheet -> Worksheet object
         self.s_client_query = gdata.spreadsheet.service.DocumentQuery()
@@ -166,15 +184,21 @@ class ContactBridge(object):
 
     def get_spreadsheet_contacts(self):
         contact_list = []
-        
+
         for i, entry in enumerate(self.address_feed.entry):
 
+            if is_gmail_contact(entry) == False:
+                continue
+        
             c = Contact()
 
             for key in entry.custom:
-
+                
                 if key == 'firstname':
                     c.first_name = entry.custom[key].text
+
+                if key == 'partnername':
+                    c.partner_name = entry.custom[key].text
                 
                 if key == 'lastname':
                     c.last_name = entry.custom[key].text
@@ -237,7 +261,28 @@ class ContactBridge(object):
             i += 1
         
         print "Pushed %d spreadsheet contacts into Google Contacts" % (i)
- 
+
+    def push_to_csv(self, contacts=None, filename=None, with_partner_name=False):
+        
+        partner_name_header = ""
+        partner_name = ""
+
+        if with_partner_name == True:
+            partner_name_header = "Partner_Name"
+    
+        if filename != None:
+            writer = csv.writer(open(filename, 'wb'), delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            writer.writerow(["First_Name", "Last_Name", "Home_Address", "Home_City", "Home_State", "Home_Zip"])
+
+            for contact in contacts:
+                
+                if with_partner_name == True and contact.partner_name != None:
+                    partner_name = "and " + contact.partner_name + " "
+                else:
+                    partner_name = ""
+
+                writer.writerow([contact.first_name, contact.last_name, contact.home_address, contact.home_city, contact.home_state, contact.home_zip])
+
 def main():
 
     e = ''
@@ -245,7 +290,9 @@ def main():
 
     cb1 = ContactBridge(email=e,password=p,spreadsheet='Addressbook',worksheet='master')
     contacts = cb1.get_spreadsheet_contacts()
-    cb1.push_to_gcontacts(contacts)
+    #cb1.push_to_csv(contacts,filename="/Users/bmunroe/test.csv")
+
+    #cb1.push_to_gcontacts(contacts)
 
 if __name__ == '__main__': main()
 
