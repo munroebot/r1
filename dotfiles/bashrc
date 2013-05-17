@@ -10,6 +10,7 @@ export GIT_UTIL_HOME=$HOME/r1/dotfiles
 export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$GPG_HOME/bin:$GIT_UTILS_HOME/:$PATH
 export PATH=/Developer/usr/bin:$PATH
+export PATH=/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin:$PATH
 
 export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
