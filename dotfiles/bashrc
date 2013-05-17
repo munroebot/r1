@@ -60,13 +60,13 @@ complete -F _myprog -o dirnames myprog
 # Moonshine Recipe File Management
 #------------------------------------
 
-MOONSHINE_TXT="$HOME/Google Drive/moonshine-recipe.txt"
+MOONSHINE_TXT="/tmp/moonshine-recipe.txt"
 MOONSHINE_TXT_ASC="$HOME/Google Drive/moonshine-recipe.txt.asc"
 
 function pwe {
     gpg --no-use-agent --decrypt -o "${MOONSHINE_TXT}" "${MOONSHINE_TXT_ASC}";
     vim ${MOONSHINE_TXT};
-    gpg --no-use-agent -i -a -c --cipher-algo AES256 ${MOONSHINE_TXT}; 
+    gpg --no-use-agent -i -a -c -o "${MOONSHINE_TXT_ASC}" --cipher-algo AES256 "${MOONSHINE_TXT}"; 
     rm -f ${MOONSHINE_TXT};
 }
 
