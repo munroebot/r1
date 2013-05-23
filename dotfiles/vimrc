@@ -7,6 +7,8 @@ set autoindent
 set ch=2
 set mousehide
 
+set guioptions-=T
+
 set t_Co=256
 
 if version >= 500
