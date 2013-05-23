@@ -7,14 +7,18 @@ set autoindent
 set ch=2
 set mousehide
 
+set guioptions-=T
+
 set t_Co=256
 
 if version >= 500
   let c_comment_strings=1
 
   if !exists("syntax_on")
-    syntax on
-    colorscheme darkblue
+    syntax enable
+    set background=dark
+    let g:solarized_termcolors=256
+    colorscheme solarized
   endif
 
   set hlsearch
