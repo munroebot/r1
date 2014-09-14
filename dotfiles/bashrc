@@ -16,10 +16,7 @@ export HISTCONTROL=ignoredups
 export LSCOLORS="hx"
 export EDITOR="mvim -N -f"
 export MVN_OPTS="-client"
-# export COMMAND_MODE=unix2003
 
-export WORKON_HOME=$HOME/.virtualenvs
-# source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper.sh
 
 export CLICOLOR=1
@@ -30,19 +27,6 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 alias ls='ls -G'
 alias apg='apg -M SNCL'
 alias flush_dns_cache='dscacheutil -flushcache'
-
-# virtualenv aliases
-# http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
-alias v='workon'
-alias v.deactivate='deactivate'
-alias v.mk='mkvirtualenv --no-site-packages'
-alias v.mk_withsitepackages='mkvirtualenv'
-alias v.rm='rmvirtualenv'
-alias v.switch='workon'
-alias v.add2virtualenv='add2virtualenv'
-alias v.cdsitepackages='cdsitepackages'
-alias v.cd='cdvirtualenv'
-alias v.lssitepackages='lssitepackages'
 
 shopt -s progcomp
 
@@ -66,14 +50,13 @@ MOONSHINE_TXT_ASC="$HOME/Google Drive/moonshine-recipe.txt.asc"
 function pwe {
     gpg --no-use-agent --decrypt -o "${MOONSHINE_TXT}" "${MOONSHINE_TXT_ASC}";
     vim ${MOONSHINE_TXT};
-    gpg --no-use-agent -i -a -c -o "${MOONSHINE_TXT_ASC}" --cipher-algo AES256 "${MOONSHINE_TXT}"; 
+    gpg --no-use-agent -i -a -c -o "${MOONSHINE_TXT_ASC}" --cipher-algo AES256 "${MOONSHINE_TXT}";
     rm -f ${MOONSHINE_TXT};
 }
 
 function greppw {
     gpg --no-use-agent --decrypt "${MOONSHINE_TXT_ASC}" | grep -i --color=auto -C 6 "$*";
 }
-
 
 #------------------------------------
 # Misc Functions
@@ -87,60 +70,9 @@ function vman {
     MANWIDTH=80 MANPAGER='col -bx' man $@ | mvim -
 }
 
-function restart_tomcat {
-
-    TOMCAT_RS_SLEEP=3;
-
-    if [[ -z ${1} ]] ; then
-        echo "Usage: restart_tomcat <some_pattern_matching_catalina_home>";
-        return -1;
-    fi
-
-    process=`ps aux | grep ${1} | grep -v grep | grep -v bash`;
-
-    if [[ -z ${process} ]] ; then
-        echo "No tomcat instances found matching that pattern...";
-        return -1;
-    fi
-
-    catalina_home_regex="-Dcatalina.home=([[:punct:][:alnum:]\/\-]*)";
-    pid_regex="^([[:alpha:]]+)[[:space:]]+([[:digit:]]+)";
-
-    if [[ $process =~ $catalina_home_regex ]] ; then
-        catalina_home=${BASH_REMATCH[1]};
-    fi
-
-    if [[ $process =~ $pid_regex ]] ; then
-        user=${BASH_REMATCH[1]};
-        pid=${BASH_REMATCH[2]};
-    fi
-
-    echo "";
-    echo "-----------------------------------------";
-    echo "Found the following tomcat(s) to restart:";
-    echo "-----------------------------------------";
-    echo "";
-    echo "${process}";
-    echo "";
-    echo "Hit Ctrl+C to cancel with in ${TOMCAT_RS_SLEEP} seconds...";
-    echo "";
-
-    sleep ${TOMCAT_RS_SLEEP};
-
-    echo "Stopping ${catalina_home}...(PID=${pid})";
-    sudo -u ${user} kill -9 ${pid};
-    sleep 3;
-    echo "";
-    echo "Starting ${catalina_home}...";
-    ${catalina_home}/bin/startup.sh;
-    echo "";
-
-}
-
 ## Prevent the creation of .DS_Store
 ## files on Network volumes in MacOS:
 ## (Restart the computer for the change to take effect)
 
 # defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 # /System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &
-
