@@ -1,40 +1,23 @@
 # distributed dot-bashrc file
-# last modified: 2011-01-12
+# last modified: 2014-12-28
 
 export GPG_HOME=/usr/local/gnupg-1.4.10
 export MYSQL_HOME=/usr/local/mysql
-export JYTHON_HOME=$HOME/jython-2.5.1
-export M2_HOME=$HOME/apache-maven-2.2.1
 export GIT_UTIL_HOME=$HOME/r1/dotfiles
 
 export PATH=/usr/local/bin:$MYSQL_HOME/bin:$M2_HOME/bin:$PATH
 export PATH=$GPG_HOME/bin:$GIT_UTILS_HOME/:$PATH
 export PATH=/Developer/usr/bin:$PATH
-export PATH=/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin:$PATH
 
 export HISTCONTROL=ignoredups
-export EDITOR="mvim -N -f"
 export MVN_OPTS="-client"
 
 source /usr/local/bin/virtualenvwrapper.sh
 
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
-alias ls='ls -G'
 alias apg='apg -M SNCL'
 alias flush_dns_cache='dscacheutil -flushcache'
-
-shopt -s progcomp
-
-_myprog() {
-    local curw
-    COMPREPLY=()
-    curw=${COMP_WORDS[COMP_CWORD]}
-    COMPREPLY=($(compgen -A user -- $curw))
-    return 0
-}
-
-complete -F _myprog -o dirnames myprog
 
 #------------------------------------
 # Moonshine Recipe File Management
